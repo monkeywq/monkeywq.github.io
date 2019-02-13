@@ -234,6 +234,19 @@
   
     
 
+    
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
   
 
   
@@ -257,6 +270,156 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://monkeywq.github.io/2019/02/13/博客文章写作/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wong">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CodeCola">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/13/博客文章写作/" itemprop="url">博客文章写作</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-13T08:32:29+08:00">2019-02-13</time>
+            
+
+            
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h2><p>关于文章的写作可以参考hexo官方网站的<a href="https://hexo.io/zh-cn/docs/writing" target="_blank" rel="noopener">文档</a>，cmd进入博客所在文件夹，输入：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo publish [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure></p>
+<p>其中title为文章标题，layout为文章布局，可输入作为默认，例如，新建一篇名为“短歌行”的文章可以输入：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> hexo new "短歌行"</span><br></pre></td></tr></table></figure></p>
+<p>之后用vscode打开博客文件夹，在source_posts子文件夹下出现“短歌行.md”文件，在这个文件中编辑文章即可。</p>
+<h2 id="基本内容写作"><a href="#基本内容写作" class="headerlink" title="基本内容写作"></a>基本内容写作</h2><p>完成.md文件创建之后就可以，创作自己的文章了，文章的是以markdown格式排版，省去了类似于word等富文本排版模式的繁琐，固定了排版框架，使文章作者专注于文章内容本身。下面先介绍markdown的几种基本元素。</p>
+<p>###标题<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>在写文章的时候一般四级标题就够用了，注意在”#”与标题内容之间有一个空格，在vscode中有无空格会带来是否高亮的变化请自行体会。</p>
+<h3 id="关于字体"><a href="#关于字体" class="headerlink" title="关于字体"></a>关于字体</h3><p>markdown本身支持的字体有限，可以与html配合产生更多效果，但是对于写文章来说自带的几种字体基本够用，毕竟文章重要的是内容而不是炫目的效果。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*斜体*</span><br><span class="line">**粗体**</span><br><span class="line">***斜体加粗***</span><br><span class="line">~~删除线~~</span><br></pre></td></tr></table></figure></p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>这个有点像word中的项目符号，但是符号的种类没有那么丰富，分为无序和有序两种，分别介绍：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 项目1</span><br><span class="line">+ 项目2</span><br><span class="line">- 项目3</span><br></pre></td></tr></table></figure>
+<p>三种写法效果相同：</p>
+<ul>
+<li>项目1</li>
+</ul>
+<ul>
+<li>项目2</li>
+</ul>
+<ul>
+<li>项目3<br>有序列表比较简单:<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 项目一</span><br><span class="line">2. 项目二</span><br><span class="line">3. 项目三</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>效果如下(好像并没有区别，哈啊哈)：</p>
+<ol>
+<li>项目一</li>
+<li>项目二</li>
+<li>项目三<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3>由于markdown对代码的支持非常友好，因此几乎全世界的程序员都喜欢使用markdown来书写readme进行交流，典型的就是最大的同性交友网站<a href="https://github.com/" target="_blank" rel="noopener">github</a>。</li>
+</ol>
+<p>markdown几乎支持所有的编程语言，插入代码块的方式:<br><img src="/images/blog6.png" alt=""><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -704,7 +867,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
