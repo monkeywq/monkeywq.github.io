@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="CodeManner">
 <meta property="og:description" content="写在开始距离假期结束的日子越来越近，与大多数学生党一样，我也在开学前夕疯狂补作业。但与以往不同的是，在恶补作业的过程中我没有了以前那种恶心感，看着电脑上敲出的文档，甚至还有一丢丢的喜欢，当然仅仅是从格式上看，深究内容的话，它还是一坨令人作呕的翔，但现在它起码是一坨附着华丽的金箔、闪闪发光的翔。摒弃了繁琐易出错的word排版，我选择了掀起印刷界的革命、到现在也是扛把子的神器——LaTeX。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-01T11:54:41.694Z">
+<meta property="og:updated_time" content="2019-03-01T12:58:46.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="排版神器LaTeX使用方法">
 <meta name="twitter:description" content="写在开始距离假期结束的日子越来越近，与大多数学生党一样，我也在开学前夕疯狂补作业。但与以往不同的是，在恶补作业的过程中我没有了以前那种恶心感，看着电脑上敲出的文档，甚至还有一丢丢的喜欢，当然仅仅是从格式上看，深究内容的话，它还是一坨令人作呕的翔，但现在它起码是一坨附着华丽的金箔、闪闪发光的翔。摒弃了繁琐易出错的word排版，我选择了掀起印刷界的革命、到现在也是扛把子的神器——LaTeX。">
@@ -336,6 +336,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/02/28/排版神器LaTeX使用方法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/28/排版神器LaTeX使用方法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -369,7 +379,7 @@
       
         <h2 id="写在开始"><a href="#写在开始" class="headerlink" title="写在开始"></a>写在开始</h2><p>距离假期结束的日子越来越近，与大多数学生党一样，我也在开学前夕疯狂补作业。但与以往不同的是，在恶补作业的过程中我没有了以前那种恶心感，看着电脑上敲出的文档，甚至还有一丢丢的喜欢，当然仅仅是从格式上看，深究内容的话，它还是一坨令人作呕的翔，但现在它起码是一坨附着华丽的金箔、闪闪发光的翔。摒弃了繁琐易出错的word排版，我选择了掀起印刷界的革命、到现在也是扛把子的神器——LaTeX。<a id="more"></a></p>
 <h2 id="关于LaTeX与TeX"><a href="#关于LaTeX与TeX" class="headerlink" title="关于LaTeX与TeX"></a>关于LaTeX与TeX</h2><p>首先介绍一下LaTeX的发音：雷泰赫，TeX是三个希腊字母，连在一起的意思是“科技”与“艺术”，LaTeX可以看作是TeX的宏包，为了避开底层TeX的复杂语法与操作LaTeX诞生，但是二者可以视为同一种东西。TeX的发明者<a href="https://zh.wikipedia.org/wiki/%E9%AB%98%E5%BE%B7%E7%BA%B3" target="_blank" rel="noopener">D.E.Knuth</a>是计算机科学界大名鼎鼎的人物，关于他的奇闻异事有很多，其中一则便与TeX的诞生有关。Knuth因为他的著作、有计算机科学界的圣经之称的《计算机程序设计与艺术》一书获得图灵奖，那时他年仅36岁，但是当出版商将他的著作印刷出来拿给他看时，追求极致完美的他怒不可遏，书籍出版商的排版在他眼里丑态百出，他毅然决定暂停书籍剩余部分的写作，决心自己开发一套完美的印刷排版软件，这就是《计算机程序设计与艺术》中途辍笔近10年的原因。<br>Knuth为TeX版本编号为圆周率数字，意思是让它趋于完美，目前最新的版本为3.1415926并且有相当长的时间没有更新过了。Knuth鼓励大家寻找TeX中的bug，并奖励第一个发现bug的人$1.28，第二个$2.56…后面依次翻倍。稍微了解数学的人都应该知道指数爆炸，多么可怕！但是Knuth就是有这样的自信，而领到他的签名支票的人很少去兑换，而是将这支票装裱收藏，视作自己一生莫大的荣誉。本篇文章将初探LaTeX，并介绍使用LaTeX排版出美观文章的方法。</p>
-<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><p>LaTex的版本较多，在其支持中文之前使用较多的是CTeX，随着LaTeX对中文宏包ctex支持，现在主流版本为<a href="http://www.tug.org/texlive/" target="_blank" rel="noopener">TeXLive</a>，TexLive的下载安装比较简单方便，需要一点点的配置，可以参考其它的教程帖进行，在此就不再赘述了。</p>
+<h2 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h2><p>LaTex的版本较多，在其支持中文之前使用较多的是CTeX，随着LaTeX对中文宏包ctex支持，现在主流版本为<a href="http://www.tug.org/texlive/" target="_blank" rel="noopener">TeXLive</a>，TexLive的下载安装比较简单方便，需要一点点的配置，可以参考其它的教程帖进行，在此就不再赘述了。其实安装TexLive之后就可以进行编辑生成文档了，可以通过文本编辑器编写源码用cmd命令行的方式编译生成文档，这样做可以一步步了解由代码生成文档的过程，对于仅仅是想用LaTeX排版、撰写文章的人来说这样显得有点繁琐，与编写程序一样，我们需要一个类似于IDE的软件来帮我们做这些编译生成文档的工作，在此推荐TexStudio。这也是一款完全免费的软件，但是下载的官方网站貌似不能打开，在此分享一个<a href="https://pan.baidu.com/s/10jPxasNOHa1eKa0Fi1jazQ" target="_blank" rel="noopener">版本</a>，</p>
 
       
     </div>
@@ -431,6 +441,9 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -676,6 +689,7 @@
 
 
 
+
   
   
 
@@ -723,6 +737,30 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MiIlPaMtkqLBxmAKf9y6jEd5-gzGzoHsz',
+        appKey: 'DI1ymNCQo9sUtQxXuASjapqz# your leancloud application appkey',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
