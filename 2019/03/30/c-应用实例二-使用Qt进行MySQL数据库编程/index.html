@@ -99,15 +99,18 @@
 
 
 
-  <meta name="keywords" content="Code">
+  <meta name="description" content="写在开始上周由于种种原因，鸽了一篇，本周开启c++应用实例的第二篇——数据库编程。数据库分为很多种有大型、中小型等，大型数据库基本是收费的，个人的项目也不会用到。但是大部分数据库的SQL语句是类似的，只有微小差别，大多数c++参考资料上的数据库教程是关于access的，这是微软自带的数据库比较基础、容易上手、规模偏小用来入门数据库比较合适，但实际项目中较少使用。相对与access，MySQL是比较">
+<meta name="keywords" content="Code">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++应用实例二:使用Qt进行MySQL数据库编程">
 <meta property="og:url" content="https://monkeywq.github.io/2019/03/30/c-应用实例二-使用Qt进行MySQL数据库编程/index.html">
 <meta property="og:site_name" content="CodeManner">
+<meta property="og:description" content="写在开始上周由于种种原因，鸽了一篇，本周开启c++应用实例的第二篇——数据库编程。数据库分为很多种有大型、中小型等，大型数据库基本是收费的，个人的项目也不会用到。但是大部分数据库的SQL语句是类似的，只有微小差别，大多数c++参考资料上的数据库教程是关于access的，这是微软自带的数据库比较基础、容易上手、规模偏小用来入门数据库比较合适，但实际项目中较少使用。相对与access，MySQL是比较">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-30T15:33:28.513Z">
+<meta property="og:updated_time" content="2019-03-31T15:13:05.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="c++应用实例二:使用Qt进行MySQL数据库编程">
+<meta name="twitter:description" content="写在开始上周由于种种原因，鸽了一篇，本周开启c++应用实例的第二篇——数据库编程。数据库分为很多种有大型、中小型等，大型数据库基本是收费的，个人的项目也不会用到。但是大部分数据库的SQL语句是类似的，只有微小差别，大多数c++参考资料上的数据库教程是关于access的，这是微软自带的数据库比较基础、容易上手、规模偏小用来入门数据库比较合适，但实际项目中较少使用。相对与access，MySQL是比较">
 
 
 
@@ -364,7 +367,10 @@
       
 
       
-        
+        <h2 id="写在开始"><a href="#写在开始" class="headerlink" title="写在开始"></a>写在开始</h2><p>上周由于种种原因，鸽了一篇，本周开启c++应用实例的第二篇——数据库编程。数据库分为很多种有大型、中小型等，大型数据库基本是收费的，个人的项目也不会用到。但是大部分数据库的SQL语句是类似的，只有微小差别，大多数c++参考资料上的数据库教程是关于access的，这是微软自带的数据库比较基础、容易上手、规模偏小用来入门数据库比较合适，但实际项目中较少使用。相对与access，MySQL是比较全面的数据库，功能丰富，使用范围比较广泛，本篇文章将介绍基于c++/Qt的MySQL数据库编程。</p>
+<h2 id="安装MySQL数据库"><a href="#安装MySQL数据库" class="headerlink" title="安装MySQL数据库"></a>安装MySQL数据库</h2><p>MySQL是开源免费的，你可以到<a href="https://www.mysql.com/" target="_blank" rel="noopener">官网</a>上下载对应的版本，包括源码版和windows安装包，源码对应命令行安装，需要手动配置my.ini文件，建议参考对应教程，本文只针对windows下的软件安装介绍。</p>
+<p>虽然现在MySQL已经更新到了8.0的版本，但是我在安装8.0版本的时候遇到了许多问题，即使通过命令行的方式成功安装，在c++程序中连接数据库时仍旧遇到了阻碍。我使用的Qt版本是Qt 5.6.2与之对应的MySQL版本我选择了MySQL 5.5，再此给出该版本的下载<a href="">链接</a>，<strong>一定要注意！</strong>，虽然网上很多教程说安装的MySQL软件位数与要与Qt位数一致，<strong>但是我要提醒的是，这样说并不严谨，应该是与你的编译的目标软件的位数相同</strong>。比如我使用的VS+Qt插件来编写软件，编译软件选择的是32位，但是我的Qt和VS都是64位，此时我应该选择的MySQL软件应该是32位而不是64位，不然就会出现dll加载失败导致链接不上数据库的问题！网上关于该问题的说法都是什么Qt自带的dll文件不能用啦，需要下载Qt源码自己编译得到dll文件了，我只能说有点走弯路了，软件包自带的dll文件没理由不能用，出现问题一定要理性分析，最不可能出问题的地方就是成熟的软件平台。</p>
+
       
     </div>
 
@@ -453,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -501,6 +516,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在开始"><span class="nav-number">1.</span> <span class="nav-text">写在开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MySQL数据库"><span class="nav-number">2.</span> <span class="nav-text">安装MySQL数据库</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
