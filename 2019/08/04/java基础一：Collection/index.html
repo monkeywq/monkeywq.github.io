@@ -99,33 +99,25 @@
 
 
 
-  <meta name="description" content="写在开始由于毕业设计的需求，前段时间学习了一下模糊控制的相关内容，先在此做一点入门的总结。模糊控制在上世级七十年代开始出现，用于描述多变量、关系不明确的系统行为。模糊控制将精确的变量模糊化为模糊变量然后按照语言规则进行模糊推理得到推理结果之后再进行逆模糊化得到精确的结果变量。看似反复的操作，但是为中间的模糊推理的实现创造了可能，在人类的认知中经验性的知识往往就是模糊不能量化的，典型的就是“如果…">
+  <meta name="description" content="写在开始作为java基础知识中的核心组成，collection类的重要性不言而喻，另外集合也是java面向对象特性的重要体现，这篇文章试图揭示一部分java中collection类的特性用法，毕竟合理地选用数据结构可以大大简化我们的算法复杂度，更何况collection类中封装了那么多的现成方法^_^!">
 <meta name="keywords" content="Code">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模糊控制入门">
-<meta property="og:url" content="https://monkeywq.github.io/2019/06/30/模糊控制入门/index.html">
+<meta property="og:title" content="java基础一：Collection">
+<meta property="og:url" content="https://monkeywq.github.io/2019/08/04/java基础一：Collection/index.html">
 <meta property="og:site_name" content="CodeManner">
-<meta property="og:description" content="写在开始由于毕业设计的需求，前段时间学习了一下模糊控制的相关内容，先在此做一点入门的总结。模糊控制在上世级七十年代开始出现，用于描述多变量、关系不明确的系统行为。模糊控制将精确的变量模糊化为模糊变量然后按照语言规则进行模糊推理得到推理结果之后再进行逆模糊化得到精确的结果变量。看似反复的操作，但是为中间的模糊推理的实现创造了可能，在人类的认知中经验性的知识往往就是模糊不能量化的，典型的就是“如果…">
+<meta property="og:description" content="写在开始作为java基础知识中的核心组成，collection类的重要性不言而喻，另外集合也是java面向对象特性的重要体现，这篇文章试图揭示一部分java中collection类的特性用法，毕竟合理地选用数据结构可以大大简化我们的算法复杂度，更何况collection类中封装了那么多的现成方法^_^!">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/1.jpg">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/2.png">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/3.jpg">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/4.png">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/5.png">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/6.png">
-<meta property="og:image" content="https://monkeywq.github.io/images/blog9/7.jpg">
-<meta property="og:updated_time" content="2019-08-04T07:39:58.276Z">
+<meta property="og:updated_time" content="2019-08-04T11:57:45.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模糊控制入门">
-<meta name="twitter:description" content="写在开始由于毕业设计的需求，前段时间学习了一下模糊控制的相关内容，先在此做一点入门的总结。模糊控制在上世级七十年代开始出现，用于描述多变量、关系不明确的系统行为。模糊控制将精确的变量模糊化为模糊变量然后按照语言规则进行模糊推理得到推理结果之后再进行逆模糊化得到精确的结果变量。看似反复的操作，但是为中间的模糊推理的实现创造了可能，在人类的认知中经验性的知识往往就是模糊不能量化的，典型的就是“如果…">
-<meta name="twitter:image" content="https://monkeywq.github.io/images/blog9/1.jpg">
+<meta name="twitter:title" content="java基础一：Collection">
+<meta name="twitter:description" content="写在开始作为java基础知识中的核心组成，collection类的重要性不言而喻，另外集合也是java面向对象特性的重要体现，这篇文章试图揭示一部分java中collection类的特性用法，毕竟合理地选用数据结构可以大大简化我们的算法复杂度，更何况collection类中封装了那么多的现成方法^_^!">
 
 
 
 
 
 
-  <link rel="canonical" href="https://monkeywq.github.io/2019/06/30/模糊控制入门/">
+  <link rel="canonical" href="https://monkeywq.github.io/2019/08/04/java基础一：Collection/">
 
 
 
@@ -135,7 +127,7 @@
   };
 </script>
 
-  <title>模糊控制入门 | CodeManner</title>
+  <title>java基础一：Collection | CodeManner</title>
   
 
 
@@ -302,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://monkeywq.github.io/2019/06/30/模糊控制入门/">
+    <link itemprop="mainEntityOfPage" href="https://monkeywq.github.io/2019/08/04/java基础一：Collection/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wong">
@@ -319,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">模糊控制入门</h1>
+          <h1 class="post-title" itemprop="name headline">java基础一：Collection</h1>
         
 
         <div class="post-meta">
@@ -331,7 +323,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-30T12:25:58+08:00">2019-06-30</time>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-04T15:35:12+08:00">2019-08-04</time>
             
 
             
@@ -375,24 +367,45 @@
       
 
       
-        <!--## 抒情环节
-又是令人神伤和不舍的毕业季，自2017年的夏天步入这个实验室以来，像这样的场面我已经历了3次，每次送别的人从初识几个月、一年、两年，我也渐渐意识到下一个被送的可能是我了，这次送别的师兄师姐真的是千日一别，此一去不知何时再见，祝他们能够不负韶华、多年后再回首能够对得起自己现在的一片热忱。-->
-<h2 id="写在开始"><a href="#写在开始" class="headerlink" title="写在开始"></a>写在开始</h2><p>由于毕业设计的需求，前段时间学习了一下模糊控制的相关内容，先在此做一点入门的总结。模糊控制在上世级七十年代开始出现，用于描述多变量、关系不明确的系统行为。模糊控制将精确的变量模糊化为模糊变量然后按照语言规则进行模糊推理得到推理结果之后再进行逆模糊化得到精确的结果变量。看似反复的操作，但是为中间的模糊推理的实现创造了可能，在人类的认知中经验性的知识往往就是模糊不能量化的，典型的就是“如果…则…”，模糊推理为这种经验知识的数学实现提供了一种方法，下面我将介绍“if-then”型模糊控制器。<a id="more"></a></p>
-<h2 id="模糊控制器的结构"><a href="#模糊控制器的结构" class="headerlink" title="模糊控制器的结构"></a>模糊控制器的结构</h2><p>模糊控制器主要由三部分组成：模糊化模块、模糊推理（模糊蕴含）、逆模糊化模块组成，其中模糊化模块的作用是将精确的变量模糊化成为模糊变量，只有模糊变量才能作为输入参与模糊推理；模糊推理包含了专家的经验值知识，即“if…then…”的内容，模糊推理的结果仍然是一个模糊变量，要想使用它需要一个逆模糊化的过程将模糊变量转换为精确的变量，这三部分的关系如下图所示，下面将逐一介绍各个环节。<br><img src="/images/blog9/1.jpg" alt=""></p>
-<h2 id="模糊化"><a href="#模糊化" class="headerlink" title="模糊化"></a>模糊化</h2><p>模糊化是将精确量变换为模糊变量，即将一个确定的结果变得不确定，比如输入误差数值为e=10，模糊化后会出现隶属度的概念，误差是极大隶属度为E1、中的隶属度为E2、极小的隶属度为E3…隶属度是属于某种状态的程度，可以类比概率来理解它。</p>
-<p>首先确定输入变量的的范围，称之为论域，然后将论域划分为几个部分，划分的数目与模糊状态的数量相等，比如选取的模糊状态有7个：负大、负中、负零、零、正零、正中、正大，也要将论域划分为7个部分。划分好论域之后要为每个论域选取一个隶属度函数，即根据精确变量计算各个状态的隶属度，常用的隶属度函数有高斯型、三角形等。</p>
-<p>高斯型隶属度函数<br><img src="/images/blog9/2.png" alt=""></p>
-<p>三角型隶属度函数<br><img src="/images/blog9/3.jpg" alt=""></p>
-<p>高斯型隶属函数形状类似钟形函数，其计算公式也与高斯分布的计算公式一致，它的优点是结果平滑，缺点是计算量大；三角形隶属度函数的计算公式为分段一次函数，不如高斯型平滑，但是计算量更小，具体选择哪种隶属度函数要根据实验平台的硬件计算能力选择。在每个论域区间选择合适的隶属度函数，模糊化完成。</p>
-<h2 id="模糊推理"><a href="#模糊推理" class="headerlink" title="模糊推理"></a>模糊推理</h2><p>模糊推理的过程就是进行“if…then…”的实现过程，在上一节完成模糊化之后就可以根据模糊变量进行模糊推理了，假设模糊控制器有两个输入，每个输入有7个模糊状态，这样模糊推理的规则条目就是7*7=49条，需要逐一编辑49条规则，这也是模糊控制最繁琐的地方。模糊推理中用到最多的就是模糊交，即if…and…then…两个模糊变量取模糊交定义结果为取隶属度最小的模糊变量，这样输入两个精确变量经过模糊化之后可以得到激活的模糊规则数目，对每条模糊规则进行模糊推理就可以得到模糊变量结果，将结果逆模糊化就可以输出了。</p>
-<h2 id="逆模糊化"><a href="#逆模糊化" class="headerlink" title="逆模糊化"></a>逆模糊化</h2><p>逆模糊化同样有多种方法，</p>
-<ul>
-<li>最大隶属度法：选取最大隶属度的模糊变量，根据输出的隶属度函数反算精确输出</li>
-<li>重心法：取所有隶属度与模糊重心心的乘积的和除隶属度和<br>最大隶属度法误差较大有时得不到较好的效果，重心法计算量大，但是结果精确，当规则条目不是太多时，重心法逆模糊化是最好的选择。要注意重心法是要计算论域的重心，对于等腰三角形来说刚好是它的中线，但是对于其它形状，如不规则三角形、梯形等都要根据面积的计算结果得出重心。<h2 id="matlab-仿真"><a href="#matlab-仿真" class="headerlink" title="matlab 仿真"></a>matlab 仿真</h2>matlab 自带模糊控制工具箱，只需要一些简单的配置就可以得到一个模糊控制器，在matlab命令行窗口输入,若加载已有的模糊控制器则在括弧里输入控制器的名字，若新建则不用输入。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fuzzy(<span class="string">'fuzzytoolname'</span>)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="/images/blog9/4.png" alt=""><br>可以点击Edit-&gt;Add Variable…添加input或output端口，双击端口就可以编辑论域，隶属度函数的个数、形状等等。<br><img src="/images/blog9/5.png" alt=""><br>双击中间的白块就可以编辑“if…then…”规则了，<br><img src="/images/blog9/6.png" alt=""><br>在最开始的对话框选择Defuzzification就可以选择去模糊化的方式，这样一个模糊控制器就搭建好了，也可以点击view-&gt;rules手动验证模糊规则的激活情况。点击File-&gt;Export-&gt;To Workspace就可以将模糊控制器导入工作空间，从simulink中拖拽Fuzzy Logic Controller 配置与工作空间中名字相同的.fis文件，这样模糊控制器就搭建好了，可以在simulink仿真文件中使用它。<br><img src="/images/blog9/7.jpg" alt=""></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>疯狂的6月终于过去，我的生活也该步入正轨，这篇模糊控制入门是对很久之前学习的内容的补充，之后我会尽量保持一定频率的更新，包括控制理论、c++、java等内容，最后还想再说一句：毕业的朋友，farwell！！！</p>
+        <h2 id="写在开始"><a href="#写在开始" class="headerlink" title="写在开始"></a>写在开始</h2><p>作为java基础知识中的核心组成，collection类的重要性不言而喻，另外集合也是java面向对象特性的重要体现，这篇文章试图揭示一部分java中collection类的特性用法，毕竟合理地选用数据结构可以大大简化我们的算法复杂度，更何况collection类中封装了那么多的现成方法^_^!<a id="more"></a></p>
+<h2 id="Collection类的特点"><a href="#Collection类的特点" class="headerlink" title="Collection类的特点"></a>Collection类的特点</h2><p>collection类似于数组的概念，是一堆数据的集合，因此可以认为collection是数据结构的体现。基础的C语言中数据结构分为顺序表(数组)、链表、栈、队列、树、图等，这些数据结构在collection类中几乎都有子类与之对应。另外，上述的数据结构只能存储相同类型的数据，但是collection类还可以存储不同类型的数据。C语言中数据结构的类型可以自行定义，可以是数值类型也可以地址/指针类型，但是java语言中collection中只能存储引用类型，如自定义类、String、装箱类型等，注意如果要存储的数据是普通的数据类型，在存储时将自动升级为装箱类型，例如：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Integer、Long、Byte、Short、Float、Double、Chararcter、Boolean</span></span><br></pre></td></tr></table></figure></p>
+<p>注意所有collection的子类的长度都不是固定的，即没有与数组对等的类型。</p>
+<h2 id="Collection包含的类型"><a href="#Collection包含的类型" class="headerlink" title="Collection包含的类型"></a>Collection包含的类型</h2><p>collection主要包含两大类型：List 和Set它们都属于父类接口，分别实现这两个子类接口的是：ArrayList、LinkedList、Vector、Stack；HashSet，TreeSet等，下面依次介绍它们的联系和区别。</p>
+<h3 id="Set和List"><a href="#Set和List" class="headerlink" title="Set和List"></a>Set和List</h3><p>Set和List的区别主要体现在是否允许内部数据重复和数据是否有序，List中的数据允许重复，并且可以对其中数据排序，其插入或移动数据的效率较高。Set中不允许其中出现重复的数据，数据插入和移动的效率较低。</p>
+<h3 id="ArrayList、LinkedList和Vector"><a href="#ArrayList、LinkedList和Vector" class="headerlink" title="ArrayList、LinkedList和Vector"></a>ArrayList、LinkedList和Vector</h3><p>实现List接口的几个类具备类似于线性表的功能，能够准确控制数据元素插入的位置和顺序，允许相同元素在List中同时存在，只是在实现方式上有所差别</p>
+<table>
+<thead>
+<tr>
+<th>类名</th>
+<th style="text-align:center">实现方式</th>
+<th style="text-align:center">是否线程安全</th>
+<th style="text-align:center">特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ArrayList</td>
+<td style="text-align:center">动态数组</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">按照下标查找比较快速插入删除数据消耗大</td>
+</tr>
+<tr>
+<td>LinkedList</td>
+<td style="text-align:center">链表</td>
+<td style="text-align:center">否</td>
+<td style="text-align:center">插入删除效率高，查找数据效率低</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td style="text-align:center">动态数组</td>
+<td style="text-align:center">是</td>
+<td style="text-align:center">使用耗时长但是线程同步</td>
+</tr>
+</tbody>
+</table>
+<h3 id="HashSet和TreeSet"><a href="#HashSet和TreeSet" class="headerlink" title="HashSet和TreeSet"></a>HashSet和TreeSet</h3><p>HashSet与TreeSet的区别在于，HashSet为Hash结构其中数据不存在顺序，TreeSet数据已经拍好顺序，采用的排序方法是二叉树排序。</p>
+<h2 id="封装方法"><a href="#封装方法" class="headerlink" title="封装方法"></a>封装方法</h2><h3 id="实现实例"><a href="#实现实例" class="headerlink" title="实现实例"></a>实现实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">List&lt;E&gt;name=<span class="keyword">new</span> ArrayList&lt;E&gt;();<span class="comment">//ArrayList实例，E为泛型</span></span><br><span class="line"></span><br><span class="line">List&lt;E&gt;name=<span class="keyword">new</span> LinkedList&lt;E&gt;();<span class="comment">//LinkedList实例</span></span><br><span class="line"></span><br><span class="line">Stack&lt;E&gt;name=<span class="keyword">new</span> Stack&lt;E&gt;();   <span class="comment">//Stack实例</span></span><br><span class="line"></span><br><span class="line">Vector&lt;E&gt;name=<span class="keyword">new</span> Vector&lt;E&gt;();  <span class="comment">//Vector实例</span></span><br><span class="line"></span><br><span class="line">HashSet&lt;E&gt;name=<span class="keyword">new</span> HashSet&lt;E&gt;(); <span class="comment">//HashSet实例</span></span><br><span class="line"></span><br><span class="line">TreeSet&lt;E&gt;name=<span class="keyword">new</span> TreeSet&lt;E&gt;();<span class="comment">//TreeSet实例</span></span><br></pre></td></tr></table></figure>
+<h3 id="通用方法"><a href="#通用方法" class="headerlink" title="通用方法"></a>通用方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">size();  <span class="comment">//返回尺寸</span></span><br><span class="line"></span><br><span class="line">contains(Object);  <span class="comment">//是否包含某一对象</span></span><br><span class="line"></span><br><span class="line">add(E);  <span class="comment">//添加元素，在末尾</span></span><br><span class="line"></span><br><span class="line">remove(Obeject); <span class="comment">//移除指定元素</span></span><br><span class="line"></span><br><span class="line">addAll(Collection); <span class="comment">//将Collection中的全部数据添加进现在的Collection中</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -420,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/02/刀塔自走棋套路推荐/" rel="next" title="刀塔自走棋套路推荐">
-                <i class="fa fa-chevron-left"></i> 刀塔自走棋套路推荐
+              <a href="/2019/06/30/模糊控制入门/" rel="next" title="模糊控制入门">
+                <i class="fa fa-chevron-left"></i> 模糊控制入门
               </a>
             
           </div>
@@ -429,10 +442,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/04/java基础一：Collection/" rel="prev" title="java基础一：Collection">
-                java基础一：Collection <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -553,7 +562,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在开始"><span class="nav-number">1.</span> <span class="nav-text">写在开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊控制器的结构"><span class="nav-number">2.</span> <span class="nav-text">模糊控制器的结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊化"><span class="nav-number">3.</span> <span class="nav-text">模糊化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模糊推理"><span class="nav-number">4.</span> <span class="nav-text">模糊推理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逆模糊化"><span class="nav-number">5.</span> <span class="nav-text">逆模糊化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#matlab-仿真"><span class="nav-number">6.</span> <span class="nav-text">matlab 仿真</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在开始"><span class="nav-number">1.</span> <span class="nav-text">写在开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection类的特点"><span class="nav-number">2.</span> <span class="nav-text">Collection类的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Collection包含的类型"><span class="nav-number">3.</span> <span class="nav-text">Collection包含的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set和List"><span class="nav-number">3.1.</span> <span class="nav-text">Set和List</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList、LinkedList和Vector"><span class="nav-number">3.2.</span> <span class="nav-text">ArrayList、LinkedList和Vector</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet和TreeSet"><span class="nav-number">3.3.</span> <span class="nav-text">HashSet和TreeSet</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封装方法"><span class="nav-number">4.</span> <span class="nav-text">封装方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#实现实例"><span class="nav-number">4.1.</span> <span class="nav-text">实现实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通用方法"><span class="nav-number">4.2.</span> <span class="nav-text">通用方法</span></a></li></ol></li></ol></div>
             
 
           </div>
